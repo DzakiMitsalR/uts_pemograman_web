@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 1 - Data Diri - KIP Kuliah 2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container my-5">
+        <div class="max-width-form mx-auto w-100 mb-5 text-center" style="max-width: 650px;">
+            <div class="d-flex justify-content-between align-items-center position-relative indicator-wrapper">
+                <div class="step-indicator active">1<span class="ind-lbl">Data Diri</span></div>
+                <div class="step-indicator">2<span class="ind-lbl">Verifikasi</span></div>
+                <div class="step-indicator">3<span class="ind-lbl">Lengkapi</span></div>
+                <div class="step-indicator">4<span class="ind-lbl">Seleksi</span></div>
+                <div class="step-indicator">5<span class="ind-lbl">Selesai</span></div>
+            </div>
+        </div>
+
+        <div class="card p-4 shadow-sm border mx-auto" style="max-width: 600px;">
+            <h6 class="fw-bold mb-4 text-uppercase"><i class="bi bi-file-earmark-person me-2"></i>Data Diri</h6>
+            <form action="step2.html" method="GET">
+                <div class="mb-3 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">NIK</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" required placeholder="Sesuai KTP/KK">
+                    </div>
+                </div>
+                <div class="mb-3 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">NISN</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" required placeholder="Validasi Dapodik">
+                    </div>
+                </div>
+                <div class="mb-3 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">Nama Lengkap</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" required placeholder="Sesuai Dokumen Resmi">
+                    </div>
+                </div>
+                <div class="mb-3 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">Tanggal Lahir</label>
+                    <div class="col-sm-9">
+                        <input type="date" class="form-control form-control-sm" required>
+                    </div>
+                </div>
+                <div class="mb-3 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">Email Aktif</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control form-control-sm" required placeholder="email.anda@contoh.com">
+                    </div>
+                </div>
+                <div class="mb-4 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">Nomor HP</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" required placeholder="08xxxxxxxxx">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mt-4">
+                    <a href="index.html" class="btn btn-outline-dark btn-sm px-4">BATAL</a>
+                    <button type="submit" class="btn btn-dark btn-sm px-4">LANJUT <i class="bi bi-arrow-right ms-1"></i></button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

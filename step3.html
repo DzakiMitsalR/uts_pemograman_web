@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 3 - Lengkapi Data - KIP Kuliah 2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container my-5">
+        <div class="max-width-form mx-auto w-100 mb-5 text-center" style="max-width: 650px;">
+            <div class="d-flex justify-content-between align-items-center position-relative indicator-wrapper">
+                <div class="step-indicator complete">1<span class="ind-lbl">Data Diri</span></div>
+                <div class="step-indicator complete">2<span class="ind-lbl">Verifikasi</span></div>
+                <div class="step-indicator active">3<span class="ind-lbl">Lengkapi</span></div>
+                <div class="step-indicator">4<span class="ind-lbl">Seleksi</span></div>
+                <div class="step-indicator">5<span class="ind-lbl">Selesai</span></div>
+            </div>
+        </div>
+
+        <div class="card p-4 shadow-sm border mx-auto" style="max-width: 600px;">
+            <h6 class="fw-bold mb-4 text-uppercase"><i class="bi bi-list-task me-2"></i>Lengkapi Data</h6>
+            <form action="step4.html" method="GET">
+                <div class="mb-3 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">Jenis Kelamin</label>
+                    <div class="col-sm-9">
+                        <select class="form-select form-select-sm" required>
+                            <option value="">Pilih</option>
+                            <option>Laki-laki</option>
+                            <option>Perempuan</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">Agama</label>
+                    <div class="col-sm-9">
+                        <select class="form-select form-select-sm" required>
+                            <option value="">Pilih</option>
+                            <option>Islam</option>
+                            <option>Kristen</option>
+                            <option>Katolik</option>
+                            <option>Hindu</option>
+                            <option>Budha</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 row align-items-start">
+                    <label class="col-sm-3 col-form-label small fw-semibold pt-1">Alamat Lengkap</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control form-control-sm" rows="2" required placeholder="Nama jalan, RT/RW, Dusun"></textarea>
+                    </div>
+                </div>
+                <div class="mb-3 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">Provinsi</label>
+                    <div class="col-sm-9">
+                        <select class="form-select form-select-sm" id="provinsi" required onchange="updateKabupaten()">
+                            <option value="">Pilih Provinsi</option>
+                            <option value="Aceh">Aceh</option>
+                            <option value="Sumatera Utara">Sumatera Utara</option>
+                            <option value="Sumatera Barat">Sumatera Barat</option>
+                            <option value="Riau">Riau</option>
+                            <option value="Kepulauan Riau">Kepulauan Riau</option>
+                            <option value="Jambi">Jambi</option>
+                            <option value="Bengkulu">Bengkulu</option>
+                            <option value="Sumatera Selatan">Sumatera Selatan</option>
+                            <option value="Kepulauan Bangka Belitung">Kepulauan Bangka Belitung</option>
+                            <option value="Lampung">Lampung</option>
+                            <option value="Banten">Banten</option>
+                            <option value="Jawa Barat">Jawa Barat</option>
+                            <option value="DKI Jakarta">DKI Jakarta</option>
+                            <option value="Jawa Tengah">Jawa Tengah</option>
+                            <option value="DI Yogyakarta">DI Yogyakarta</option>
+                            <option value="Jawa Timur">Jawa Timur</option>
+                            <option value="Bali">Bali</option>
+                            <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                            <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                            <option value="Kalimantan Barat">Kalimantan Barat</option>
+                            <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+                            <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+                            <option value="Kalimantan Timur">Kalimantan Timur</option>
+                            <option value="Kalimantan Utara">Kalimantan Utara</option>
+                            <option value="Sulawesi Utara">Sulawesi Utara</option>
+                            <option value="Gorontalo">Gorontalo</option>
+                            <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                            <option value="Sulawesi Barat">Sulawesi Barat</option>
+                            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                            <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                            <option value="Maluku">Maluku</option>
+                            <option value="Maluku Utara">Maluku Utara</option>
+                            <option value="Papua Barat">Papua Barat</option>
+                            <option value="Papua">Papua</option>
+                            <option value="Papua Tengah">Papua Tengah</option>
+                            <option value="Papua Pegunungan">Papua Pegunungan</option>
+                            <option value="Papua Selatan">Papua Selatan</option>
+                            <option value="Papua Barat Daya">Papua Barat Daya</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">Kabupaten/Kota</label>
+                    <div class="col-sm-9">
+                        <select class="form-select form-select-sm" id="kabupaten" required>
+                            <option value="">Pilih Kabupaten/Kota</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-4 row align-items-center">
+                    <label class="col-sm-3 col-form-label small fw-semibold">Sekolah Asal</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" required placeholder="SMA/SMK/MA/Sederajat">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a href="step2.html" class="btn btn-outline-dark btn-sm px-4"><i class="bi bi-arrow-left me-1"></i> KEMBALI</a>
+                    <button type="submit" class="btn btn-dark btn-sm px-4">LANJUT <i class="bi bi-arrow-right ms-1"></i></button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const dataWilayah = {
+            "Aceh": ["Banda Aceh", "Aceh Besar", "Lhokseumawe", "Sabang", "Meulaboh", "Langsa", "Pidie"],
+            "Sumatera Utara": ["Medan", "Binjai", "Deli Serdang", "Karo", "Simalungun"],
+            "Sumatera Barat": ["Padang", "Bukittinggi", "Payakumbuh", "Pariaman"],
+            "Riau": ["Pekanbaru", "Dumai", "Kampar", "Bengkalis"],
+            "Kepulauan Riau": ["Batam", "Tanjungpinang", "Bintan", "Karimun"],
+            "Jambi": ["Kota Jambi", "Muaro Jambi", "Bungo", "Kerinci"],
+            "Bengkulu": ["Kota Bengkulu", "Rejang Lebong", "Muko-Muko"],
+            "Sumatera Selatan": ["Palembang", "Prabumulih", "Ogan Komering Ilir", "Banyuasin"],
+            "Kepulauan Bangka Belitung": ["Pangkalpinang", "Bangka", "Belitung"],
+            "Lampung": ["Bandar Lampung", "Metro", "Lampung Selatan", "Pesawaran"],
+            "Banten": ["Serang", "Tangerang", "Cilegon", "Tangerang Selatan"],
+            "Jawa Barat": ["Bandung", "Bogor", "Depok", "Bekasi", "Cirebon", "Sukabumi"],
+            "DKI Jakarta": ["Jakarta Pusat", "Jakarta Selatan", "Jakarta Timur", "Jakarta Barat", "Jakarta Utara"],
+            "Jawa Tengah": ["Semarang", "Surakarta", "Magelang", "Banyumas", "Kudus"],
+            "DI Yogyakarta": ["Yogyakarta", "Sleman", "Bantul", "Kulon Progo", "Gunungkidul"],
+            "Jawa Timur": ["Surabaya", "Malang", "Sidoarjo", "Gresik", "Banyuwangi", "Madiun"],
+            "Bali": ["Denpasar", "Badung", "Gianyar", "Buleleng", "Tabanan"],
+            "Nusa Tenggara Barat": ["Mataram", "Lombok Barat", "Lombok Timur", "Bima"],
+            "Nusa Tenggara Timur": ["Kupang", "Ende", "Sikka", "Manggarai"],
+            "Kalimantan Barat": ["Pontianak", "Singkawang", "Kubu Raya", "Sambas"],
+            "Kalimantan Tengah": ["Palangkaraya", "Kotawaringin Timur", "Kapuas"],
+            "Kalimantan Selatan": ["Banjarmasin", "Banjarbaru", "Martapura", "Tabalong"],
+            "Kalimantan Timur": ["Samarinda", "Balikpapan", "Kutai Kartanegara", "Bontang"],
+            "Kalimantan Utara": ["Tanjung Selor", "Tarakan", "Nunukan"],
+            "Sulawesi Utara": ["Manado", "Bitung", "Tomohon", "Minahasa"],
+            "Gorontalo": ["Kota Gorontalo", "Limboto", "Bone Bolango"],
+            "Sulawesi Tengah": ["Palu", "Donggala", "Banggai", "Sigi"],
+            "Sulawesi Barat": ["Mamuju", "Majene", "Polewali Mandar"],
+            "Sulawesi Selatan": ["Makassar", "Gowa", "Maros", "Bone", "Parepare"],
+            "Sulawesi Tenggara": ["Kendari", "Baubau", "Kolaka", "Muna"],
+            "Maluku": ["Ambon", "Tual", "Maluku Tengah"],
+            "Maluku Utara": ["Ternate", "Tidore Kepulauan", "Halmahera"],
+            "Papua Barat": ["Manokwari", "Fakfak", "Kaimana"],
+            "Papua": ["Jayapura", "Biak Numfor", "Merauke"],
+            "Papua Tengah": ["Nabire", "Mimika"],
+            "Papua Pegunungan": ["Wamena", "Jayawijaya"],
+            "Papua Selatan": ["Merauke", "Asmat"],
+            "Papua Barat Daya": ["Sorong", "Raja Ampat"]
+        };
+
+        function updateKabupaten() {
+            const provinsiSelect = document.getElementById("provinsi");
+            const kabupatenSelect = document.getElementById("kabupaten");
+            const provinsiTerpilih = provinsiSelect.value;
+
+            kabupatenSelect.innerHTML = '<option value="">Pilih Kabupaten/Kota</option>';
+
+            if (provinsiTerpilih && dataWilayah[provinsiTerpilih]) {
+                dataWilayah[provinsiTerpilih].forEach(kab => {
+                    const option = document.createElement("option");
+                    option.value = kab;
+                    option.textContent = kab;
+                    kabupatenSelect.appendChild(option);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

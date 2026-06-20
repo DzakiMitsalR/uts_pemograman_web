@@ -1,0 +1,181 @@
+body {
+    background-color: #fafafa;
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar-nav .nav-link {
+    color: #555;
+    transition: color 0.2s ease;
+}
+.navbar-nav .nav-link:hover {
+    color: #000;
+}
+
+.indicator-wrapper {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.indicator-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #e0e0e0;
+    z-index: 1;
+}
+
+.step-indicator {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #888;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.step-indicator.active {
+    border-color: #000;
+    background-color: #000;
+    color: #fff !important;
+}
+
+.step-indicator.complete {
+    border-color: #198754;
+    background-color: #198754;
+    color: #fff !important;
+}
+
+.ind-lbl {
+    position: absolute;
+    top: 48px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #666;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.step-indicator.active .ind-lbl {
+    color: #000;
+}
+
+.selection-card {
+    cursor: pointer;
+    border-color: #e0e0e0;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.selection-card:hover {
+    border-color: #a0a0a0;
+}
+.form-check-input:checked ~ .form-check-label {
+    color: #000 !important;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #666;
+    box-shadow: none;
+}
+
+.kode-box {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+.navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#carouselHero .carousel-inner img {
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+    
+    .container.my-5, .py-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .indicator-wrapper::before {
+        top: 16px;
+    }
+
+    .step-indicator {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+
+    .ind-lbl {
+        display: none !important;
+    }
+
+    .row.align-items-center, .row.align-items-start {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .row.align-items-center label, .row.align-items-start label {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: left !important;
+        margin-bottom: 5px;
+        padding-bottom: 0;
+    }
+
+    .row.align-items-center .col-sm-9, .row.align-items-start .col-sm-9 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .kode-box {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.1rem !important;
+    }
+
+    .card {
+        padding: 1.25rem !important;
+    }
+
+    #carouselHero .carousel-inner img {
+        height: 190px;
+    }
+    h1.display-4 {
+        font-size: 1.8rem !important;
+        text-align: center;
+    }
+    p.lead {
+        font-size: 0.95rem !important;
+        text-align: justify;
+    }
+}
